@@ -15,7 +15,7 @@ class CreateJournalEntriesTable extends Migration
     {
         Schema::create('journal_entries', function (Blueprint $table) {
             $table->date('date')->primary();
-            $table->text('body');
+            $table->text('body')->nullable();
             $table->timestamps();
         });
     }

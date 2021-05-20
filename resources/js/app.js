@@ -6,7 +6,29 @@ require('./bootstrap');
 
 function App() {
     return (
-        <Home/>
+        <>
+            <nav className="navbar">
+                <div className="container">
+                    <div id="navMenu" className="navbar-menu">
+                        <div className="navbar-start">
+                            <a className="navbar-item">
+                                Work Diary
+                            </a>
+                        </div>
+
+                        <div className="navbar-end">
+                            <a className="navbar-item" href="https://github.com/rajkumaar23/work-diary">
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <section className="hero is-light is-fullheight-with-navbar">
+                <Home/>
+            </section>
+        </>
     )
 }
 

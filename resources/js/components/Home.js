@@ -1,13 +1,19 @@
-import React, {useRef} from 'react';
+import React, {useRef, useState} from 'react';
 import { Editor } from '@tinymce/tinymce-react';
+import DayPicker from 'react-day-picker';
+import 'react-day-picker/lib/style.css';
 
 export default function () {
     const editorRef = useRef(null)
+    const [selectedDay, setSelectedDay] = useState()
 
     return (
         <div className="columns">
-            <div className="column">
-                First column
+            <div className="column is-one-quarter m-6 has-text-centered">
+                <DayPicker
+                    onDayClick={setSelectedDay}
+                    selectedDays={selectedDay}
+                />
             </div>
             <div className="column m-6">
                 <>
@@ -24,7 +30,7 @@ export default function () {
                                 'removeformat | help',
                         }}
                     />
-                    <button className="button is-info is-fullwidth mt-3">Save</button>
+                    <button className="button is-dark is-fullwidth mt-3">Save</button>
                 </>
             </div>
         </div>

@@ -12,7 +12,8 @@ function App() {
                     <div id="navMenu" className="navbar-menu">
                         <div className="navbar-start">
                             <a className="navbar-item">
-                                Work Diary
+                                <img src="/journal.svg" />
+                                <span className="ml-2">Work&nbsp;Diary</span>
                             </a>
                         </div>
 

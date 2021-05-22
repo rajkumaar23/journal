@@ -21,6 +21,7 @@ export default function () {
             }
         } catch (e) {
             alert(e.message)
+            setBody('');
         } finally {
             setLoading(false)
         }

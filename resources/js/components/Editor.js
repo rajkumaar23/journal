@@ -5,7 +5,7 @@ export default function ({body, handleChange, loading}) {
     return (
         <>
             <Editor
-                tinymceScriptSrc="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
+                tinymceScriptSrc="/js/tinymce/tinymce.min.js"
                 disabled={loading}
                 init={{
                     height: 450,

@@ -25,7 +25,7 @@ class JournalEntryController extends Controller
                 $entry->body = $request->get('body');
                 $entry->save();
             }
-            return response()->json(['message' => 'Entry updated successfully']);
+            return response()->json(['message' => 'Entry updated successfully', 'body' => $entry->body]);
         } catch (Exception $exception) {
             return response()->json(['message' => 'An unexpected error occurred'], 500);
         }

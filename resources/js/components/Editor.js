@@ -5,7 +5,7 @@ export default function ({body, handleChange, loading}) {
     return (
         <>
             <Editor
-                apiKey={"jk971c6bc7lw2xxzsvykyz36mtoasawuwhmfyv5nmqbhb88l"}
+                tinymceScriptSrc="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js"
                 disabled={loading}
                 init={{
                     height: 450,

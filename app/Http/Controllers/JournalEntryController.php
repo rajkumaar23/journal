@@ -12,7 +12,7 @@ class JournalEntryController extends Controller
     public function getEntries($date): JsonResponse
     {
         $entry = JournalEntry::where('date', $date)->first();
-        return response()->json(['message' => 'Entry fetched', 'data' => $entry]);
+        return response()->json(['message' => 'Entry fetched', 'data' => empty($entry) ? null : $entry->only('body')]);
     }
 
     public function addOrUpdateEntry(Request $request, $date): JsonResponse

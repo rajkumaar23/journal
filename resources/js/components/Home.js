@@ -62,7 +62,7 @@ export default function () {
                     {body: text}
                 )
                     .then(() => setSaving(SavingState.SAVED))
-                    .catch((e) => alert(e.message))
+                    .catch((e) => alert(e.message) && setSaving(SavingState.NOT_SAVED))
             }, 500)
         )
     }

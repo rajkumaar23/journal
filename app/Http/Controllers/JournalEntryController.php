@@ -20,7 +20,7 @@ class JournalEntryController extends Controller
         try {
             $entry = JournalEntry::where('date', $date)->first();
             if (empty($entry)) {
-                JournalEntry::create(['date' => $date, 'body' => $request->get('body')]);
+                $entry = JournalEntry::create(['date' => $date, 'body' => $request->get('body')]);
             } else {
                 $entry->body = $request->get('body');
                 $entry->save();

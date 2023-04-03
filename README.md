@@ -1,4 +1,4 @@
-## Work Diary
+## Journal
 
 a no-nonsense distraction-free journal app.
 
